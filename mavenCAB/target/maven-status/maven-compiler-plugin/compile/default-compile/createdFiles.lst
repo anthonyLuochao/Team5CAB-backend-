@@ -1,0 +1,6 @@
+Model\Booking.class
+Model\Users.class
+controller\Test.class
+Model\FacilityType.class
+util\PersistenceManager.class
+Model\Facility.class

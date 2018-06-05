@@ -1,0 +1,92 @@
+package Model;
+
+import java.util.Date;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import org.hibernate.mapping.Set;
+
+@Entity
+@Table(name="booking")
+public class Booking {
+@Id
+private int bookingID;
+@ManyToOne
+@JoinColumn(name="userID",nullable=false)
+private Users users;
+@ManyToOne
+@JoinColumn(name="facilityID",nullable=false)
+private Facility facility;
+
+//private int facilityID;
+//private String userID;
+@Column(name="start_Date")
+private Date startDate;
+@Column(name="end_Date")
+private Date endDate;
+@Column(columnDefinition="TINYINT")
+private boolean isUnderMaintenance;
+@Column(columnDefinition="TINYINT")
+private boolean isCancel;
+public Users getUsers() {
+	return users;
+}
+public void setUsers(Users users) {
+	this.users = users;
+}
+public Facility getFacility() {
+	return facility;
+}
+public void setFacility(Facility facility) {
+	this.facility = facility;
+}
+public int getBookingID() {
+	return bookingID;
+}
+public void setBookingID(int bookingID) {
+	this.bookingID = bookingID;
+}
+//public int getFacilityID() {
+//	return facilityID;
+//}
+//public void setFacilityID(int facilityID) {
+//	this.facilityID = facilityID;
+//}
+//public String getUserID() {
+//	return userID;
+//}
+//public void setUserID(String userID) {
+//	this.userID = userID;
+//}
+public Date getStartDate() {
+	return startDate;
+}
+public void setStartDate(Date startDate) {
+	this.startDate = startDate;
+}
+public Date getEndDate() {
+	return endDate;
+}
+public void setEndDate(Date endDate) {
+	this.endDate = endDate;
+}
+public boolean isUnderMaintenance() {
+	return isUnderMaintenance;
+}
+public void setUnderMaintenance(boolean isUnderMaintenance) {
+	this.isUnderMaintenance = isUnderMaintenance;
+}
+public boolean isCancel() {
+	return isCancel;
+}
+public void setCancel(boolean isCancel) {
+	this.isCancel = isCancel;
+}
+
+
+}
