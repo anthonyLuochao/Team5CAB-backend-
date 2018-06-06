@@ -23,16 +23,13 @@ private List<Booking> bookings;
 private String name;
 private String email;
 private String address;
-@Column(name="phonenumber")
-private int phoneNumber;
+private String phoneNumber;
 private Date dob; 
-private String membershipID;
 private String role;
 private String password;
 public String getUserID() {
 	return userID;
 }
-
 public void setUserID(String userID) {
 	this.userID = userID;
 }
@@ -54,10 +51,10 @@ public String getAddress() {
 public void setAddress(String address) {
 	this.address = address;
 }
-public int getPhoneNumber() {
+public String getPhoneNumber() {
 	return phoneNumber;
 }
-public void setPhoneNumber(int phoneNumber) {
+public void setPhoneNumber(String phoneNumber) {
 	this.phoneNumber = phoneNumber;
 }
 public Date getDob() {
@@ -65,12 +62,6 @@ public Date getDob() {
 }
 public void setDob(Date dob) {
 	this.dob = dob;
-}
-public String getMembershipID() {
-	return membershipID;
-}
-public void setMembershipID(String membershipID) {
-	this.membershipID = membershipID;
 }
 public String getRole() {
 	return role;
@@ -83,6 +74,12 @@ public String getPassword() {
 }
 public void setPassword(String password) {
 	this.password = password;
+}
+@Override
+public String toString() {
+	return "Users [userID=" + userID + ", bookings=" + bookings + ", name=" + name + ", email=" + email + ", address="
+			+ address + ", phoneNumber=" + phoneNumber + ", dob=" + dob + ", role=" + role + ", password=" + password
+			+ "]";
 }
 
 

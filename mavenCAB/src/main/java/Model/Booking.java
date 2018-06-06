@@ -30,7 +30,7 @@ private Date startDate;
 @Column(name="end_Date")
 private Date endDate;
 @Column(columnDefinition="TINYINT")
-private boolean isUnderMaintenance;
+private boolean isUnderMaintenance;  
 @Column(columnDefinition="TINYINT")
 private boolean isCancel;
 public Users getUsers() {
@@ -51,18 +51,6 @@ public int getBookingID() {
 public void setBookingID(int bookingID) {
 	this.bookingID = bookingID;
 }
-//public int getFacilityID() {
-//	return facilityID;
-//}
-//public void setFacilityID(int facilityID) {
-//	this.facilityID = facilityID;
-//}
-//public String getUserID() {
-//	return userID;
-//}
-//public void setUserID(String userID) {
-//	this.userID = userID;
-//}
 public Date getStartDate() {
 	return startDate;
 }
@@ -75,17 +63,18 @@ public Date getEndDate() {
 public void setEndDate(Date endDate) {
 	this.endDate = endDate;
 }
-public boolean isUnderMaintenance() {
-	return isUnderMaintenance;
-}
-public void setUnderMaintenance(boolean isUnderMaintenance) {
-	this.isUnderMaintenance = isUnderMaintenance;
-}
+
 public boolean isCancel() {
 	return isCancel;
 }
 public void setCancel(boolean isCancel) {
 	this.isCancel = isCancel;
+}
+@Override
+public String toString() {
+	return "Booking [bookingID=" + bookingID + ", users=" + users + ", facility=" + facility + ", startDate="
+			+ startDate + ", endDate=" + endDate + ", isUnderMaintenance=" + isUnderMaintenance + ", isCancel="
+			+ isCancel + "]";
 }
 
 

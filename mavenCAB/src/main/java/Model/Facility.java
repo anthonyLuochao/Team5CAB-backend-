@@ -25,7 +25,6 @@ private List<Booking> bookings;
 @JoinColumn(name="typeID",nullable=false)
 private FacilityType facilityType;
 
-@Column(name="facilityname")
 private String facilityName;
 private String description;
 private String address;
@@ -65,12 +64,6 @@ public String getAddress() {
 public void setAddress(String address) {
 	this.address = address;
 }
-//public String getTypeID() {
-//	return typeID;
-//}
-//public void setTypeID(String typeID) {
-//	this.typeID = typeID;
-//}
 public boolean isDamaged() {
 	return isDamaged;
 }
@@ -82,6 +75,12 @@ public String getDamageReason() {
 }
 public void setDamageReason(String damageReason) {
 	this.damageReason = damageReason;
+}
+@Override
+public String toString() {
+	return "Facility [facilityID=" + facilityID + ", bookings=" + bookings + ", facilityType=" + facilityType
+			+ ", facilityName=" + facilityName + ", description=" + description + ", address=" + address
+			+ ", isDamaged=" + isDamaged + ", damageReason=" + damageReason + "]";
 }
 
 }
