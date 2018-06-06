@@ -77,7 +77,7 @@ public void setPassword(String password) {
 }
 @Override
 public String toString() {
-	return "Users [userID=" + userID + ", bookings=" + bookings + ", name=" + name + ", email=" + email + ", address="
+	return "Users [userID=" + userID + ", name=" + name + ", email=" + email + ", address="
 			+ address + ", phoneNumber=" + phoneNumber + ", dob=" + dob + ", role=" + role + ", password=" + password
 			+ "]";
 }

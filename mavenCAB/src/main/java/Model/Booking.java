@@ -72,7 +72,7 @@ public void setCancel(boolean isCancel) {
 }
 @Override
 public String toString() {
-	return "Booking [bookingID=" + bookingID + ", users=" + users + ", facility=" + facility + ", startDate="
+	return "Booking [bookingID=" + bookingID + ", usersID=" + users.getUserID() + ", facilityID=" + facility.getFacilityID() + ", startDate="
 			+ startDate + ", endDate=" + endDate + ", isUnderMaintenance=" + isUnderMaintenance + ", isCancel="
 			+ isCancel + "]";
 }

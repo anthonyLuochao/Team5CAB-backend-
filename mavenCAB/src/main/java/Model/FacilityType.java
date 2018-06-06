@@ -33,7 +33,7 @@ public void setTypeName(String typeName) {
 }
 @Override
 public String toString() {
-	return "FacilityType [typeID=" + typeID + ", typeName=" + typeName + ", facilities=" + facilities + "]";
+	return "FacilityType [typeID=" + typeID + ", typeName=" + typeName +"]";
 }
 
 }
